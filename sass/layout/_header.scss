@@ -60,7 +60,7 @@
     background-image: url("../images/crystal/crystal@x3.png");
   }
 
-  &-text {
+  .header__coints-menu-item-text {
     padding: 0 16px 0 20px;
     @include font($fs: 13px, $fw: 700, $lh: 16px);
   }

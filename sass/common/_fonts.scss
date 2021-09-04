@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Leksa Sans";
+  src: url("../fonts/LeksaSans.eot");
+  src: local("☺"), url("../fonts/LeksaSans.woff") format("woff"),
+    url("../fonts/LeksaSans.ttf") format("truetype"),
+    url("../fonts/LeksaSans.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Leksa Sans";
+  src: url("../fonts/LeksaSans-Bold.eot");
+  src: local("☺"), url("../fonts/LeksaSans-Bold.woff") format("woff"),
+    url("../fonts/LeksaSans-Bold.ttf") format("truetype"),
+    url("../fonts/LeksaSans-Bold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Leksa Sans";
+  src: url("../fonts/LeksaSans-Black.eot");
+  src: local("☺"), url("../fonts/LeksaSans-Black.woff") format("woff"),
+    url("../fonts/LeksaSans-Black.ttf") format("truetype"),
+    url("../fonts/LeksaSans-Black.svg") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}

@@ -1,0 +1,81 @@
+.shop {
+  min-height: 640px;
+  background-image: url("../../images/bg-mobile/bg-mobile@x3.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .shop__nav {
+    text-align: center;
+    background-color: #181723;
+  }
+
+  .shop__nav-list {
+    display: flex;
+    align-items: center;
+  }
+
+  .shop__nav-item {
+  }
+
+  .shop__nav-btn {
+    position: relative;
+    display: block;
+    padding: 6px 5px 12px;
+    min-height: 48px;
+    @include font($fs: 14px, $fw: 700, $lh: 14px);
+    cursor: pointer;
+    transition: background-image 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+      background-image: linear-gradient(#181723, #2c1931);
+      background-repeat: no-repeat;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 0;
+      height: 3px;
+      background-color: transparent;
+      transition: background-image 250ms $timing-function,
+        width 500ms $timing-function;
+    }
+
+    &:before {
+      right: 50%;
+    }
+
+    &:after {
+      left: 50%;
+    }
+
+    &:hover:before,
+    &:focus:before {
+      background-image: linear-gradient(
+        to left,
+        #fa5482,
+        #f52dbe 70%,
+        #602150,
+        #601e55
+      );
+      width: 50%;
+    }
+
+    &:hover:after,
+    &:focus:after {
+      background-image: linear-gradient(
+        to right,
+        #fa5482,
+        #fe7a48 70%,
+        #602150,
+        #613237
+      );
+      width: 50%;
+    }
+  }
+}
