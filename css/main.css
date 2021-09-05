@@ -614,7 +614,7 @@ button {
 
 .shop {
   min-height: 640px;
-  background-image: url("../../images/bg-mobile/bg-mobile@x3.jpg");
+  background-image: url("../images/bg-mobile/bg-mobile@x3.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -893,7 +893,7 @@ button {
 
 @media screen and (min-width: 1366px) {
   .shop {
-    background-image: url("../../images/bg-desct/bg-descx3.jpg");
+    background-image: url("../images/bg-desct/bg-descx3.jpg");
   }
   .shop .shop__container {
     max-width: 980px;
