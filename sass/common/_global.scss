@@ -8,4 +8,16 @@ button {
   border-color: transparent;
   border: none;
   background-color: transparent;
+  cursor: pointer;
+}
+
+.space-box {
+  width: 100%;
+  height: 96px;
+}
+
+@media screen and (min-width: 1366px) {
+  .space-box {
+    height: 150px;
+  }
 }

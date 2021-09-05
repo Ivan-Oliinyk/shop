@@ -6,16 +6,19 @@
   background-size: cover;
 
   .shop__nav {
-    text-align: center;
+    position: fixed;
+    z-index: 2;
+    top: 48px;
+    width: 100%;
     background-color: #181723;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .shop__nav-list {
     display: flex;
     align-items: center;
-  }
-
-  .shop__nav-item {
+    justify-content: center;
   }
 
   .shop__nav-btn {
@@ -59,7 +62,7 @@
       background-image: linear-gradient(
         to left,
         #fa5482,
-        #f52dbe 70%,
+        #f52dbe 60%,
         #602150,
         #601e55
       );
@@ -71,11 +74,225 @@
       background-image: linear-gradient(
         to right,
         #fa5482,
-        #fe7a48 70%,
+        #fe7a48 60%,
         #602150,
         #613237
       );
       width: 50%;
+    }
+  }
+
+  .shop__container {
+    padding: 18px 11px;
+    margin-top: 11px;
+    background-color: #272536;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+  }
+
+  .shop__container-title {
+    display: none;
+  }
+
+  .shop__container-list {
+    display: grid;
+    grid-template-columns: repeat(2, 124px);
+    gap: 10px;
+    width: 100%;
+  }
+
+  .shop__container-item {
+    position: relative;
+    padding: 21px 13px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../images/cart-bg/cart-bg@x3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    // width: 124px;
+    min-height: 171px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 6px #000;
+    transition: box-shadow 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 3px grey;
+    }
+  }
+
+  .trapzoid-box {
+    position: absolute;
+    left: -19px;
+    top: 14px;
+    transform: rotate(-45deg);
+    .trapzoid-firs {
+      position: relative;
+      border-bottom: 19px solid #ff4910;
+      border-left: 19px solid transparent;
+      border-right: 19px solid transparent;
+      height: 0;
+      width: 85px;
+    }
+
+    .trapzoid-second {
+      position: absolute;
+      top: 2px;
+      left: -13px;
+      display: flex;
+      justify-content: center;
+      // align-items: center;
+      border-bottom: 15px solid #dc2b19;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      height: 0;
+      width: 73px;
+      @include font($fs: 11px, $fw: 700, $lh: 15px);
+      text-align: center;
+    }
+
+    .trapzoid-second__text {
+      position: relative;
+      display: block;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -14px;
+        transform: rotate(45deg);
+        display: inline-block;
+        background-image: url("../images/coints/Coin-mini.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  .shop__container-item-img {
+    display: inline-block;
+    width: 87px;
+    height: 48px;
+  }
+
+  .shop__container-item-number {
+    @include font($fs: 20px, $fw: 700, $lh: 32px);
+  }
+
+  .shop__container-item-title {
+    @include font($fs: 11px, $fw: 400, $lh: 18px);
+    margin-bottom: 10px;
+  }
+
+  .shop__container-item-btn {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 10px;
+    min-width: 98px;
+    border-radius: 15px;
+    background: linear-gradient(90deg, #682fbd 0%, #cb4cbc 100%);
+    @include font($fs: 11px, $fw: 400, $lh: 13px);
+    transition: box-shadow 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 3px grey;
+    }
+
+    .coints {
+      position: relative;
+      display: inline-block;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -17px;
+        display: block;
+        background-image: url("../images/crystal/crystals_mini.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 17px;
+        height: 17px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .shop {
+    .shop__container {
+      max-width: 425px;
+    }
+
+    .shop__container-list {
+      grid-template-columns: repeat(3, 124px);
+      gap: 15px;
+    }
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .shop {
+    background-image: url("../../images/bg-desct/bg-descx3.jpg");
+
+    .shop__container {
+      max-width: 980px;
+      margin-top: 0;
+      padding: 24px 26px;
+    }
+
+    .shop__nav {
+      margin-top: 10px;
+      width: 980px;
+      top: 93px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: transparent;
+      display: grid;
+    }
+
+    .shop__container-title {
+      display: block;
+      text-align: center;
+      margin-bottom: 24px;
+      @include font($fs: 30px, $fw: 700, $lh: 37px);
+    }
+
+    .shop__nav-item {
+      &:not(:last-of-type) {
+        margin-right: 10px;
+      }
+    }
+
+    .shop__nav-btn {
+      width: 188px;
+      background-color: #272536;
+      border-radius: 10px 10px 0 0;
+      @include font($fs: 20px, $fw: 700, $lh: 25px);
+    }
+
+    .shop__container {
+      border-radius: 0 0 10px 10px;
+    }
+
+    .shop__container-list {
+      grid-template-columns: repeat(4, 217px);
+      grid-template-rows: repeat(3, 300px);
+      grid-auto-flow: row;
+      gap: 20px;
+    }
+
+    .shop__container-list {
+      justify-content: space-between;
     }
   }
 }
