@@ -981,6 +981,7 @@ button {
             align-items: center;
   }
   .shop .text {
+    display: block;
     margin-right: 25px;
   }
 }
